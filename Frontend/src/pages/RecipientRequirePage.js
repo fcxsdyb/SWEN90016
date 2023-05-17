@@ -8,7 +8,7 @@ const { Sider, Content } = Layout;
 
 const RecipientRequirePage = () => {
     const [dataSource, setDataSource] = useState([]);
-    
+
     useEffect(() => {
         fetch('http://localhost:8080/recipients/requisitions')
             .then(response => response.json())
@@ -32,7 +32,7 @@ const RecipientRequirePage = () => {
 
                 <Layout>
                     <Content style={{ padding: '0 24px', minHeight: 280 }}>
-                        <ProTable dataSource={dataSource} columns={columns} rowKey="id" />
+                        <ProTable dataSource={dataSource} columns={columns} rowKey="id" search={{ labelWidth: 150 }} />
                     </Content>
                 </Layout>
             </Layout>

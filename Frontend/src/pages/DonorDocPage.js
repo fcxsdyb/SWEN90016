@@ -32,7 +32,7 @@ const DonorDocPage = () => {
 
                 <Layout>
                     <Content style={{ padding: '0 24px', minHeight: 280 }}>
-                        <ProTable dataSource={dataSource} columns={columns} rowKey="id" />
+                        <ProTable dataSource={dataSource} columns={columns} rowKey="id" search={{ labelWidth: 200 }} />                    
                     </Content>
                 </Layout>
             </Layout>
