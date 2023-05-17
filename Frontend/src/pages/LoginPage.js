@@ -1,16 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Layout, Typography, Form, Input, Button, Checkbox } from 'antd';
+
 const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 
 const LoginPage = () => {
-    const navigate = useNavigate(); // <-- updated line
+    const navigate = useNavigate();
 
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
         if (values.username === 'admin' && values.password === 'admin') {
-            navigate('/information');
+            navigate('/home');
         }
     };
 
